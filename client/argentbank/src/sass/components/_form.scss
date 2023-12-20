@@ -1,27 +1,30 @@
 /*** Form ***/
 
-.input-remember {
-    display: flex;
-}
+.input {
 
-.input-remember label {
-    margin-left: 0.25rem;
-}
+    &_remember {
+        display: flex;
 
-.input-wrapper {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-bottom: 1rem;
-}
+        & label {
+            margin-left: 0.25rem;
+        }
+    }
 
-.input-wrapper label {
-    font-weight: bold;
-}
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        margin-bottom: 1rem;
 
-.input-wrapper input {
-    padding: 5px;
-    font-size: 1.2rem;
+        & label {
+            font-weight: bold;
+        }
+
+        & input {
+            padding: 5px;
+            font-size: 1.2rem;
+        }
+    }
 }
 
 .sign-in-button {
@@ -31,7 +34,7 @@
     font-size: 1.1rem;
     font-weight: bold;
     margin-top: 1rem;
-    border-color: #00bc77;
-    background-color: #00bc77;
-    color: #fff;
+    border-color: $color-green;
+    background-color: $color-green;
+    color: $color-white;
 }

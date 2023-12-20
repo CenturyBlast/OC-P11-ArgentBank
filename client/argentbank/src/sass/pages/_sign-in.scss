@@ -5,18 +5,20 @@
 }
 
 .bg-dark {
-    background-color: #12002b;
+    background-color: $color-green;
 }
 
-.sign-in-content {
-    box-sizing: border-box;
-    background-color: white;
-    width: 300px;
-    margin: 0 auto;
-    margin-top: 3rem;
-    padding: 2rem;
-}
+.sign-in {
+    &_content {
+        box-sizing: border-box;
+        background-color: $color-white;
+        width: 300px;
+        margin: 0 auto;
+        margin-top: 3rem;
+        padding: 2rem;
+    }
 
-.sign-in-icon {
-    font-size: 5rem;
+    &_icon {
+        font-size: 5rem;
+    }
 }
