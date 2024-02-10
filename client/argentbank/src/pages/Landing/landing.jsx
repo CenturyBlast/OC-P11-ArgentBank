@@ -1,6 +1,6 @@
-import chatIcon from '../../data/icon-chat.png';
-import moneyIcon from '../../data/icon-money.png';
-import securityIcon from '../../data/icon-security.png';
+import chatIcon from '../../data/icon-chat.webp';
+import moneyIcon from '../../data/icon-money.webp';
+import securityIcon from '../../data/icon-security.webp';
 import Hero from '../../components/Hero/hero';
 
 export default function Landing() {
