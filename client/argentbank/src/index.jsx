@@ -9,19 +9,23 @@ import User from './pages/User/user';
 import Footer from './components/Footer/footer';
 
 // REDUX
+import { Provider } from 'react-redux';
+import { store } from './redux/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/user" element={<User />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store} >
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/user" element={<User />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   </React.StrictMode>
 );

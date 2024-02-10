@@ -1,6 +1,6 @@
 /*** Header ***/
 
-.main-nav {
+.main-nav, .sign-out {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,6 +13,10 @@
         &.router-link-exact-active {
             color: $color-green-active;
         }
+    }
+
+    & .fa, .fa-solid {
+        margin-right: 5px;
     }
 
     &_item {
