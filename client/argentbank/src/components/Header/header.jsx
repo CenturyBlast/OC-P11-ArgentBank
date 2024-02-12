@@ -15,7 +15,7 @@ export default function Header() {
         event.preventDefault();
         dispatch(logout());
         navigate('/');
-        console.log(user);
+        console.log("USER STATE on LOGOUT", user);
     };
 
     return (
@@ -25,15 +25,22 @@ export default function Header() {
                     <img className="main-nav_logo-image" src={argentBankLogo} alt="Argent Bank Logo" />
                 </Link>
                 <div>
-                    {token ? (<Link to="/" className="main-nav_item" onClick={switchLogout}>
-                        <i className="fa fa-user-circle"></i>
-                        {user.userName}{' '}
-                        <i className="fa-solid fa-arrow-right-from-bracket"></i>
-                        Sign Out
-                    </Link>) : (<Link to="/sign-in" className="main-nav_item">
-                        <i className="fa fa-user-circle"></i>
-                        Sign In
-                    </Link>)}
+                    {token ? (
+                        <div className="main-nav-logged">
+                            <div className="main-nav-logged_user">
+                                <i className="fa fa-user-circle"></i>
+                                {user.userName}
+                            </div>
+                            <Link to="/" className="main-nav_item" onClick={switchLogout}>
+                                <i className="fa-solid fa-arrow-right-from-bracket"></i>
+                                Sign Out
+                            </Link>
+                        </div>
+                    ) : (
+                        <Link to="/sign-in" className="main-nav_item">
+                            <i className="fa fa-user-circle"></i>
+                            Sign In
+                        </Link>)}
                 </div>
             </nav>
         </header>

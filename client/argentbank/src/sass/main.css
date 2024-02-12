@@ -211,36 +211,55 @@ body {
 }
 
 /*** Header ***/
-.main-nav, .sign-out {
+.main-nav,
+.sign-out {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
 }
-.main-nav a, .sign-out a {
+.main-nav a,
+.sign-out a {
   font-weight: bold;
   color: #2c3e50;
 }
-.main-nav a.router-link-exact-active, .sign-out a.router-link-exact-active {
+.main-nav a.router-link-exact-active,
+.sign-out a.router-link-exact-active {
   color: #42b983;
 }
-.main-nav .fa, .main-nav .fa-solid, .sign-out .fa, .sign-out .fa-solid {
+.main-nav .fa,
+.main-nav .fa-solid,
+.sign-out .fa,
+.sign-out .fa-solid {
   margin-right: 5px;
 }
-.main-nav_item, .sign-out_item {
+.main-nav_item,
+.sign-out_item {
   text-decoration: none;
   margin-right: 0.5rem;
 }
-.main-nav_item:hover, .sign-out_item:hover {
+.main-nav_item:hover,
+.sign-out_item:hover {
   text-decoration: underline;
 }
-.main-nav_logo, .sign-out_logo {
+.main-nav_logo,
+.sign-out_logo {
   display: flex;
   align-items: center;
 }
-.main-nav_logo-image, .sign-out_logo-image {
+.main-nav_logo-image,
+.sign-out_logo-image {
   max-width: 100%;
   width: 200px;
+}
+.main-nav-logged,
+.sign-out-logged {
+  display: flex;
+}
+.main-nav-logged_user,
+.sign-out-logged_user {
+  font-weight: bold;
+  margin-right: 1.5rem;
 }
 
 /*** Landing ***/

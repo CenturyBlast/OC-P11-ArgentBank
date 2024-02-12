@@ -19,7 +19,7 @@ export default function Edit({ onCancel }) {
 
     const handleSave = (event) => {
         event.preventDefault();
-        const response = updateUsername(token, newUserName);
+        const response = updateUsername(token, newUserName, dispatch);
         if (response) {
             dispatch(setNewUsername(newUserName));
             onCancel();

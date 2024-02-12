@@ -4,7 +4,7 @@ import { setUserInfo, setNewUsername } from "../Slices/authSlice";
 // GET USER INFO
 
 export async function getUserInfo(token, dispatch) {
-    console.log("getUserInfo called");
+    console.log("APPEL RQ GET USER INFO");
     try {
 
         const headers = {
@@ -16,7 +16,7 @@ export async function getUserInfo(token, dispatch) {
             method: 'POST',
             headers: headers,
         });
-        console.log('Retour Request GET INFOS', response);
+        console.log('rep. RQ GET INFOS', response);
 
         if (response.ok) {
             const data = await response.json();
@@ -52,10 +52,10 @@ export async function updateUsername(token, newUserName, dispatch) {
             },
             body: JSON.stringify(requestBody),
         });
-        console.log('Retour Request new USERNAME', request);
+        console.log('rep. RQ NEW U.N.', request);
 
         const data = await request.json();
-        console.log('Retour Data new USERNAME', data);
+        console.log('rep. RQ DATA NEW U.N.', data);
         dispatch(setNewUsername(data.body.userName));
     }
 

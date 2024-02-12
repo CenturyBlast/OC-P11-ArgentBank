@@ -16,6 +16,7 @@ export default function User() {
             try {
 
                 getUserInfo(token, dispatch);
+                console.log("TOKEN DISPATCH")
             }
 
             catch (error) {

@@ -1,6 +1,7 @@
 /*** Header ***/
 
-.main-nav, .sign-out {
+.main-nav,
+.sign-out {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +16,8 @@
         }
     }
 
-    & .fa, .fa-solid {
+    & .fa,
+    .fa-solid {
         margin-right: 5px;
     }
 
@@ -35,6 +37,15 @@
         &-image {
             max-width: 100%;
             width: 200px;
+        }
+    }
+
+    &-logged {
+        display: flex;
+
+        &_user {
+            font-weight: bold;
+            margin-right: 1.5rem;
         }
     }
 }
