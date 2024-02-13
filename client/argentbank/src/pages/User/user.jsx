@@ -3,29 +3,36 @@ import Account from "../../components/Account/account";
 import Edit from "../../components/Edit/edit";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserInfo } from "../../redux/CallApi/userCall";
+import { useNavigate } from "react-router-dom";
 
 export default function User() {
 
     const user = useSelector((state) => state.auth.user);
     const token = useSelector((state) => state.auth.token);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(() => {
         async function getData() {
 
             try {
+                if (!token) {
+                    navigate("/");
+                    return;
+                }
 
-                getUserInfo(token, dispatch);
-                console.log("TOKEN DISPATCH")
+                await getUserInfo(token, dispatch);
             }
 
             catch (error) {
-                console.error(error);
+                alert("Failed to fetch user profile");
+                console.error("Failed to fetch user profile : ", error);
             }
         };
 
         getData();
-    }, [token, dispatch]);
+
+    }, [token, navigate, dispatch]);
 
     const [editing, setEditing] = useState(false);
 

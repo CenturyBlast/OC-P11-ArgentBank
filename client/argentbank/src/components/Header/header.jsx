@@ -15,7 +15,6 @@ export default function Header() {
         event.preventDefault();
         dispatch(logout());
         navigate('/');
-        console.log("USER STATE on LOGOUT", user);
     };
 
     return (

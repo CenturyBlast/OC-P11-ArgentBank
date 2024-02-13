@@ -8,9 +8,8 @@ import SignIn from './pages/SignIn/signin';
 import User from './pages/User/user';
 import Footer from './components/Footer/footer';
 
-// REDUX
 import { Provider } from 'react-redux';
-import { store } from './redux/store'
+import { store } from './redux/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
